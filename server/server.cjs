@@ -120,8 +120,8 @@ app.post("/api/create-payment", async (req, res) => {
         amount: String(amount),
         currency: "MWK",
         tx_ref: txRef,
-       callback_url: "https://crushable-tweak-chirpy.ngrok-free.dev/api/payment-callback",
-        return_url: "http://localhost:5173/",
+       callback_url: "https://yamiss-website.onrender.com/api/payment-callback",
+return_url: "https://yamiss-website.onrender.com/",
         customization: {
           title: "Yamiss Advertising",
           description: `Advertising payment for ${business.name}`
