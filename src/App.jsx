@@ -26,7 +26,7 @@ const [loginPassword, setLoginPassword] = useState("");
   const [images, setImages] = useState([]);
   const [submittedBusinesses, setSubmittedBusinesses] = useState([]);
   useEffect(() => {
-  fetch("http://localhost:5000/api/businesses")
+  fetch("/api/businesses")
     .then((response) => response.json())
     .then((data) => {
       setSubmittedBusinesses(data);
@@ -185,7 +185,7 @@ useEffect(() => {
     <button
   onClick={async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/owner-login", {
+      const response = await fetch("/api/owner-login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
